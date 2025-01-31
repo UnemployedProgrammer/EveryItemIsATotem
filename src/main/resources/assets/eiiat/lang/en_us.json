@@ -1,0 +1,9 @@
+{
+  "blacklisting.eiiat.success" : "Blacklisted item {}. Restart your server.",
+  "blacklisting.eiiat.fail" : "{} is already blacklisted!",
+  "including.eiiat.success" : "{} removed from blacklist. Restart your server.",
+  "including.eiiat.fail" : "{} isn't blacklisted!",
+  "get.eiiat.are" : "Blacklisted Items: ",
+  "get.eiiat.item" : "- {}",
+  "get.eiiat.click" : "Click to remove."
+}
