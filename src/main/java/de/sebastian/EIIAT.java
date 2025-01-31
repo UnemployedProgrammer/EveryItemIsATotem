@@ -105,7 +105,7 @@ public class EIIAT implements ModInitializer {
 											.executes(commandContext -> {
 												commandContext.getSource().sendFeedback(() -> Text.translatable("get.eiiat.are"), false);
 												for (Item excludedEntry : ItemConfigHelper.EXCLUDED_ENTRIES) {
-													commandContext.getSource().sendFeedback(() -> formatAndExecuteCommand(Formatting.BLUE, "get.eiiat.item", Text.translatable(excludedEntry.getTranslationKey()).getString(), "get.eiiat.click", "/eiiat exclude " + Registries.ITEM.getId(excludedEntry)), false);
+													commandContext.getSource().sendFeedback(() -> formatAndExecuteCommand(Formatting.BLUE, "get.eiiat.item", Text.translatable(excludedEntry.getTranslationKey()).getString(), "get.eiiat.click", "/eiiat include " + Registries.ITEM.getId(excludedEntry)), false);
 												}
 												return 1;
 											})
