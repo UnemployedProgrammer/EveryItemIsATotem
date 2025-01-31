@@ -1,9 +1,9 @@
 {
-  "blacklisting.eiiat.success" : "Blacklisted item {}. May need to restart your server.",
-  "blacklisting.eiiat.fail" : "{} is already blacklisted!",
-  "including.eiiat.success" : "{} removed from blacklist. May need to restart your server.",
-  "including.eiiat.fail" : "{} isn't blacklisted!",
-  "get.eiiat.are" : "Blacklisted Items: ",
+  "blacklisting.eiiat.success" : "{} wurde auf die Blacklist gesetzt. Du musst deinen Server möglicherweise neu starten.",
+  "blacklisting.eiiat.fail" : "{} ist bereits auf der Blacklist!",
+  "including.eiiat.success" : "{} wurde von der Blacklist entfernt. Du musst deinen Server möglicherweise neu starten.",
+  "including.eiiat.fail" : "{} ist nicht auf der Blacklist!",
+  "get.eiiat.are" : "Gesperrte Items: ",
   "get.eiiat.item" : "- {}",
-  "get.eiiat.click" : "Click to remove."
+  "get.eiiat.click" : "Klicke, um zu entfernen."
 }
