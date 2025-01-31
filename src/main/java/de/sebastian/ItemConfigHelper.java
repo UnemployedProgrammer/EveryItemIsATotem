@@ -14,7 +14,7 @@ public class ItemConfigHelper {
 
     public static List<Item> EXCLUDED_ENTRIES = new ArrayList<>();
 
-    private static final Path CONFIG_PATH = FabricLoader.getInstance().getConfigDir().resolve("items_config.json");
+    private static final Path CONFIG_PATH = FabricLoader.getInstance().getConfigDir().resolve("eiiat_excluded_items.json");
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     public static void saveItems(List<Item> items) {
@@ -25,8 +25,7 @@ public class ItemConfigHelper {
 
         try (Writer writer = new FileWriter(CONFIG_PATH.toFile())) {
             GSON.toJson(itemIds, writer);
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException ignored) {
         }
     }
 
@@ -46,8 +45,7 @@ public class ItemConfigHelper {
             }
 
             return items;
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException ignored) {
         }
 
         return new ArrayList<>();
