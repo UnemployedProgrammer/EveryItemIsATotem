@@ -70,7 +70,7 @@ public class EIIAT implements ModInitializer {
 													.executes(commandContext -> {
 														Item item = ItemStackArgumentType.getItemStackArgument(commandContext, "item").getItem();
 														if(ItemConfigHelper.EXCLUDED_ENTRIES.contains(item)) {
-															commandContext.getSource().sendFeedback(() -> format(Formatting.GREEN, "blacklisting.eiiat.fail", Text.translatable(item.getTranslationKey()).getString()), false);
+															commandContext.getSource().sendFeedback(() -> format(Formatting.RED, "blacklisting.eiiat.fail", Text.translatable(item.getTranslationKey()).getString()), false);
 															return 1;
 														}
 														ItemConfigHelper.EXCLUDED_ENTRIES.add(item);
@@ -99,7 +99,7 @@ public class EIIAT implements ModInitializer {
 											.executes(commandContext -> {
 												commandContext.getSource().sendFeedback(() -> Text.translatable("get.eiiat.are"), false);
 												for (Item excludedEntry : ItemConfigHelper.EXCLUDED_ENTRIES) {
-													formatAndExecuteCommand(Formatting.BLUE, "get.eiiat.item", Text.translatable(excludedEntry.getTranslationKey()).getString(), "get.eiiat.click", "eiiat exclude " + Registries.ITEM.getId(excludedEntry));
+													commandContext.getSource().sendFeedback(() -> formatAndExecuteCommand(Formatting.BLUE, "get.eiiat.item", Text.translatable(excludedEntry.getTranslationKey()).getString(), "get.eiiat.click", "eiiat exclude " + Registries.ITEM.getId(excludedEntry)), false);
 												}
 												return 1;
 											})
