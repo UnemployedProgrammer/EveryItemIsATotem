@@ -1,0 +1,9 @@
+{
+  "blacklisting.eiiat.success" : "{} è stato aggiunto alla lista nera. Potresti dover riavviare il server.",
+  "blacklisting.eiiat.fail" : "{} è già nella lista nera!",
+  "including.eiiat.success" : "{} è stato rimosso dalla lista nera. Potresti dover riavviare il server.",
+  "including.eiiat.fail" : "{} non è nella lista nera!",
+  "get.eiiat.are" : "Elementi nella lista nera: ",
+  "get.eiiat.item" : "- {}",
+  "get.eiiat.click" : "Clicca per rimuovere."
+}
