@@ -46,8 +46,14 @@ public class EIIAT implements ModInitializer {
 			for (ServerPlayerEntity serverPlayerEntity : minecraftServer.getPlayerManager().getPlayerList()) {
 				for (int i = 0; i < serverPlayerEntity.getInventory().size(); i++) { // Iterate over slots
 					ItemStack stack = serverPlayerEntity.getInventory().getStack(i);
-					if (!stack.isEmpty() && !ItemConfigHelper.EXCLUDED_ENTRIES.contains(stack.getItem())) {
-						stack.set(DataComponentTypes.DEATH_PROTECTION, DeathProtectionComponent.TOTEM_OF_UNDYING);
+					if (!stack.isEmpty()) {
+						if(!ItemConfigHelper.EXCLUDED_ENTRIES.contains(stack.getItem())) {
+							stack.set(DataComponentTypes.DEATH_PROTECTION, DeathProtectionComponent.TOTEM_OF_UNDYING);
+						} else {
+							if(stack.get(DataComponentTypes.DEATH_PROTECTION) != null) {
+								stack.remove(DataComponentTypes.DEATH_PROTECTION);
+							}
+						}
 					}
 				}
 			}
